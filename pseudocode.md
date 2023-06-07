@@ -21,9 +21,8 @@ Create varialbes for each HTML element
 Set the state by creating the array of objects 
 
 Functions
-1: A function that moves the moves the state to the next object array when the button is clicked
-2: A function that reverts the array back to one when the reverse button is clicked
-3: 
+1: A function that moves the state to the next object array when the button is clicked
+2: A function that reverts the array back to the first object in the array when the reverse button is clicked
 
 Procedural
 

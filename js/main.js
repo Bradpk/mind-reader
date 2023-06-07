@@ -1,1 +1,5 @@
-
+const h1 = document.getElementById("h1")
+const next = document.getElementById('next')
+const p1 = document.getElementById('p1')
+const p2 = document.getElementById('p2')
+const goReset = document.getElementById('goReset')
