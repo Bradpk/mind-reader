@@ -17,4 +17,8 @@ const stateArray = [
 
     { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is:" }
   ];
+
+function nextArrayState() {
+
+}
   
