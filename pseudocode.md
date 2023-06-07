@@ -18,6 +18,11 @@ Thinking outloud
 
 Procedural
 
+-BEGIN
+-INIT()
+-RENDER
+-END
+
 Functional
 
 Object Oriented
