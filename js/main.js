@@ -8,7 +8,7 @@ const goReset = document.getElementById('goReset')
 // Test
 const buttons = document.getElementById("goReset");
 buttons.addEventListener('click', () => {
-    buttons.textContent = 'Yo';
+    buttons.textContent = 'Reset';
     })
 
 
@@ -32,15 +32,13 @@ let pageIndex = 0
   
 function changePage() {
 let currentPage = pageArray[pageIndex]
-
 h1.innerText = currentPage.topText
 next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
-
-
 pageIndex = (pageIndex + 1)
 }
   
 goReset.addEventListener("click", changePage);
+next.addEventListener("click", changePage)
 
 
