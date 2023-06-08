@@ -52,7 +52,8 @@ FUNCTIONS
 - Go / Reset Event Handler
     Create an event listener for the go/reset button that calls the Forward/Back function upon clicking
 
-- Symbol Generator. (Picks a random symbol out of a variable that contains an array of symbols)
+- Symbol Generator. 
+    Picks a random symbol out of a variable that contains an array of symbols using math.random? 
 
 
 
