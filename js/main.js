@@ -12,17 +12,17 @@ let pageIndex = 0
 different html element when cycled through. 
 */
 const pageArray = [
-    { topText: "I can read your mind", nextStyle: false, nextButton: "", textBelowButton: "", goButton: "Go" },//page 1
+    { topText: "I can read your mind", nextButton: "", textBelowButton: "", goButton: "Go" },//page 1
 
-    { topText: "Pick a number from 01-99", nextButton: "NEXT", textBelowButton: "when you have your number click next", goButton: "↻" },//page 2
+    { topText: "Pick a number from \n01 - 99", nextButton: "NEXT", textBelowButton: "when you have your number click next", goButton: "↻" },//page 2
 
-    { topText: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5 click to proceed", goButton: "↻"},//page 3
+    { topText: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5 \nclick to proceed", goButton: "↻"},//page 3
 
-    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 click to proceed", goButton: "↻"},//page 4
+    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 \nclick to proceed", goButton: "↻"},//page 4
 
     { topText: "symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻"},//page 5
 
-    { topText: "&", nextButton: "", textBelowButton: "Your symbol is: &", goButton: "↻"}//page 6
+    { topText: "&", nextButton: "", textBelowButton: "Your symbol is: \n&", goButton: "↻"}//page 6
   ];
 
 /*--- This function will cycle through the different object arrays (pages). 
@@ -38,11 +38,7 @@ h1.innerText = currentPage.topText
 next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
 goReset.innerText = currentPage.goButton // ?
-next.style = currentPage.nextStyle
 pageIndex = (pageIndex + 1)
-if(next.style === false){
-    next.style.visibility = hidden
-}
 }
 
 /*--- This function will reset the object array back to the first page. 
@@ -60,6 +56,8 @@ function changePageReset() {
     goReset.innerText = currentPage.goButton // ?
     pageIndex = (pageIndex = 0)
 }
+
+
   
 /*--- Inserting the changePage function into the "goReset" button event listener will change the page upon clicking by displaying 
 the html element in the second object array.
@@ -100,6 +98,5 @@ if (goReset.innerText === "Go"){
     return changePageReset()
 }
 }
-
 
 goReset.addEventListener("click", forwardBack);
