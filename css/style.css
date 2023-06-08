@@ -1,7 +1,15 @@
 .card {
     margin-top: 50px;
-    height: 500px
+    height: 700px;
+    width: 300px;
 }
 div {
   text-align: center;
+}
+#next {
+    color: white;
+    background-color: rgba(1, 50, 114, 0.408);
+}
+#goReset {
+    border-radius: 50%;
 }
