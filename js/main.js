@@ -37,7 +37,13 @@ let currentPage = pageArray[pageIndex]
 h1.innerText = currentPage.topText
 next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
-goReset.innerText = currentPage.goButton // ?
+goReset.innerText = currentPage.goButton 
+if (pageIndex === 0 || pageIndex === 5) {
+    next.style.visibility = "hidden";
+  } else {
+    next.style.visibility = "visible";
+    next.innerText = currentPage.nextButton;
+  }
 pageIndex = (pageIndex + 1)
 }
 
@@ -53,7 +59,7 @@ function changePageReset() {
     h1.innerText = currentPage.topText
     next.innerText = currentPage.nextButton
     p1.innerText = currentPage.textBelowButton
-    goReset.innerText = currentPage.goButton // ?
+    goReset.innerText = currentPage.goButton 
     pageIndex = (pageIndex = 0)
 }
 
