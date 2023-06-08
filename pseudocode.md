@@ -10,20 +10,20 @@ VARIABLES
 
 -BEGIN
 -RENDER
--INIT()
-    The h1 display (contains the text that provides instructions)
+-INIT
+The h1 display (contains the text that provides instructions)
 
-    The next button (clickable button thats renders the next page)
+The next button (clickable button thats renders the next page)
 
-    The first "p" content (contains the text that provides the examples)
+The first "p" content (contains the text that provides the examples)
 
-    The second "p" content (contains the text telling the user to proceed)
+The second "p" content (contains the text telling the user to proceed)
 
-    The Go / Reset Button (clickable button that renders the next page and then resets to the first page on the subsequent clicks)
+The Go / Reset Button (clickable button that renders the next page and then resets to the first page on the subsequent clicks)
 
-    The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
+The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
     
-    The object array (an array of objects that corrispond to each page with their own uniques properties)
+The object array (an array of objects that corrispond to each page with their own uniques properties)
 -END
 
 
