@@ -23,7 +23,7 @@ const pageArray = [
 
     { topText: "symbols", nextButton: "REVEAL", textBelowButton: "Find your new number." },
 
-    { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is:" }
+    { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is: &" }
   ];
 
 
