@@ -38,12 +38,12 @@ pageIndex = (pageIndex + 1)
 }
   
 goReset.addEventListener("click", changePage);
-next.addEventListener("click", changePage)
+next.addEventListener("click", changePage);
 
 
 function reset() {
-if (pageIndex >= 1) {
-return pageArray[0]
+if (goReset.textContent === "Reset") {
+   
 }
 }
 
