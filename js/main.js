@@ -34,6 +34,8 @@ function changePage() {
 let currentPage = pageArray[pageIndex]
 
 h1.innerText = currentPage.topText
+next.innerText = currentPage.nextButton
+p1.innerText = currentPage.textBelowButton
 
 
 pageIndex = (pageIndex + 1)
