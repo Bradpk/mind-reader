@@ -7,21 +7,22 @@ const goReset = document.getElementById('goReset')
 let pageIndex = 0
 
 
+
 /*--- Contains an array of objects that corrispond to different pages. Each page contains its own properties which will display 
 different html element when cycled through. 
 */
 const pageArray = [
-    { topText: "I can read your mind", nextButton: "", textBelowButton: "", goButton: "Go" },//page 1
+    { topText: "I can read your mind", nextStyle: false, nextButton: "", textBelowButton: "", goButton: "Go" },//page 1
 
-    { topText: "Pick a number from 01-99", nextButton: "NEXT", textBelowButton: "when you have your number click next", goButton: "Reset" },//page 2
+    { topText: "Pick a number from 01-99", nextButton: "NEXT", textBelowButton: "when you have your number click next", goButton: "↻" },//page 2
 
-    { namtopTexte: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5", goButton: "Reset" },//page 3
+    { topText: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5 click to proceed", goButton: "↻"},//page 3
 
-    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9", goButton: "Reset" },//page 4
+    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 click to proceed", goButton: "↻"},//page 4
 
-    { topText: "symbols", nextButton: "REVEAL", textBelowButton: "Find your new number.", goButton: "Reset" },//page 5
+    { topText: "symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻"},//page 5
 
-    { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is: &", goButton: "Reset" }//page 6
+    { topText: "&", nextButton: "", textBelowButton: "Your symbol is: &", goButton: "↻"}//page 6
   ];
 
 /*--- This function will cycle through the different object arrays (pages). 
@@ -37,7 +38,11 @@ h1.innerText = currentPage.topText
 next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
 goReset.innerText = currentPage.goButton // ?
+next.style = currentPage.nextStyle
 pageIndex = (pageIndex + 1)
+if(next.style === false){
+    next.style.visibility = hidden
+}
 }
 
 /*--- This function will reset the object array back to the first page. 
@@ -92,7 +97,7 @@ function forwardBack() {
 if (goReset.innerText === "Go"){
     return changePage()
 } else {
-    return changePageReset
+    return changePageReset()
 }
 }
 
