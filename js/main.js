@@ -4,7 +4,15 @@ const p1 = document.getElementById('p1')
 const p2 = document.getElementById('p2')
 const goReset = document.getElementById('goReset')
 
-const stateArray = [
+
+// Test
+const buttons = document.getElementById("goReset");
+buttons.addEventListener('click', () => {
+    buttons.textContent = 'Yo';
+    })
+
+
+const pageArray = [
     { topText: "I can read your mind", nextButton: "", textBelowButton: "" },
 
     { topText: "Pick a number from 01-99", nextButton: "NEXT", textBelowButton: "when you have your number click next" },
@@ -18,7 +26,19 @@ const stateArray = [
     { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is:" }
   ];
 
-function nextArrayState() {
 
+let pageIndex = 0
+
+  
+function changePage() {
+let currentPage = pageArray[pageIndex]
+
+h1.innerText = currentPage.topText
+
+
+pageIndex = (pageIndex + 1)
 }
   
+goReset.addEventListener("click", changePage);
+
+
