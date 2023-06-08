@@ -62,3 +62,4 @@ if (goReset.textContent === "Reset") {
 }
 }
 
+let sym

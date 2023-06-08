@@ -11,6 +11,8 @@ VARIABLES
 -BEGIN
 -RENDER
 -INIT
+A variable to keep track of the current page.
+
 The h1 display (contains the text that provides instructions)
 
 The next button (clickable button thats renders the next page)
@@ -24,6 +26,7 @@ The Go / Reset Button (clickable button that renders the next page and then rese
 The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
     
 The object array (an array of objects that corrispond to each page with their own uniques properties)
+
 -END
 
 
