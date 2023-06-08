@@ -33,4 +33,11 @@ Procedural
 
 Functional
 
+- A reset button. (Will revert the display back to the the first array object)
+
+- A next button. (Will increment to the next array object)
+
 Object Oriented
+
+- An object that contains an array of objects. Each of the objects in the array will corrispond to a different page display with it's own unique set of properties. h1, nextbutton, p, resetbutton etc
+
