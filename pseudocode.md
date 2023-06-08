@@ -1,37 +1,34 @@
-Mind Reader
+MIND READER PROJECT
 
-Thinking outloud
+Use state management to progress forward to the next view, backward to the previous view, and reset to the first view on the page.
+By default, the app should prompt the user to click through the single-page app and see a new view for every step.
+You need to be able to scroll through the numbers to find your symbol (page 5 on the wireframe).
 
-    Each page will be an object in an array of objects
 
-    Each one of those objects will have different properties that will be the different elements on the page.
 
-    Every time the button is clicked it will "change state" by moving to the next object in the array resulting in the elements on the page changing.
-    
-    The objects in the array will need:
-    object 1: h1, go button(goes to the next object in the array)
-    object 2: h1, next button(goes to the next object in the array), p, reverse button(goes to the first object in the array) 
-    object 3: h1, next button(goes to the next object in the array), p, p, reverse button(goes to the first object in the array) 
-    object 4: h1, next button(goes to the next object in the array), p, p, reverse button(goes to the first object in the array) 
-    object 5: h1, next button(goes to the next object in the array), p, p, reverse button(goes to the first object in the array) 
-    object 6: symbol, p, smaller symbol, reverse button(goes to the first object in the array) 
-
-Create varialbes for each HTML element 
-
-Set the state by creating the array of objects 
-
-Functions
-1: A function that moves the state to the next object array when the button is clicked
-2: A function that reverts the array back to the first object in the array when the reverse button is clicked
-
-Procedural
+VARIABLES 
 
 -BEGIN
--INIT()
 -RENDER
+-INIT()
+    The h1 display (contains the text that provides instructions)
+
+    The next button (clickable button thats renders the next page)
+
+    The first "p" content (contains the text that provides the examples)
+
+    The second "p" content (contains the text telling the user to proceed)
+
+    The Go / Reset Button (clickable button that renders the next page and then resets to the first page on the subsequent clicks)
+
+    The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
+    
+    The object array (an array of objects that corrispond to each page with their own uniques properties)
 -END
 
-Functional
+
+
+FUNCTIONS
 
 - Event handlers. (Registers when the buttons have been clicked and what to do once they are clicked)
 
@@ -41,7 +38,16 @@ Functional
 
 - Symbol Generator. (Picks a random symbol out of a variable that contains an array of symbols)
 
-Object Oriented
+
+
+OBJECT ORIENTED
 
 - An object that contains an array of objects. Each of the objects in the array will corrispond to a different page display with it's own unique set of properties. h1, nextbutton, p, resetbutton etc
 
+
+
+START:
+1. Display the first page 
+2. Move to the second object array (second page) upon clicking the "go" button
+3. Increment to the next object array upon clicking the "next" button. OR Revert page to the first object array (page 1) upon clicking the "Reset" button (which is the same button as the go button but with a different name on page 2)
+END
