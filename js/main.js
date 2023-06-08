@@ -28,7 +28,6 @@ const pageArray = [
 
 
 let pageIndex = 0
-
   
 function changePage() {
 let currentPage = pageArray[pageIndex]
@@ -42,3 +41,8 @@ goReset.addEventListener("click", changePage);
 next.addEventListener("click", changePage)
 
 
+function reset() {
+if (pageIndex === 0) {
+return pageArray[0]
+}
+}
