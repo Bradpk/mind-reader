@@ -64,12 +64,12 @@ function changePageReset() {
 /*--- Inserting the changePage function into the "goReset" button event listener will change the page upon clicking by displaying 
 the html element in the second object array.
 */
-goReset.addEventListener("click", changePage);
+goReset.addEventListener("click", changePageReset);
 
 /*--- Inserting the changePage function into the "next" button event listener will change the page upon clicking by displaying 
 the html element in the second object array.
 */
-next.addEventListener("click", changePageBack);
+next.addEventListener("click", changePage);
 
 //--- Figuring out how to revert back to page one upon clicking the go reset button the second time
 function reset() {
