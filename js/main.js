@@ -5,13 +5,13 @@ const p2 = document.getElementById('p2')
 const goReset = document.getElementById('goReset')
 
 
-// Test
+//---
 const buttons = document.getElementById("goReset");
 buttons.addEventListener('click', () => {
     buttons.textContent = 'Reset';
     })
 
-
+//---
 const pageArray = [
     { topText: "I can read your mind", nextButton: "", textBelowButton: "" },
 
@@ -26,7 +26,7 @@ const pageArray = [
     { topText: "symbol", nextButton: "", textBelowButton: "Your symbol is: &" }
   ];
 
-
+//---
 let pageIndex = 0
   
 function changePage() {
@@ -37,10 +37,11 @@ p1.innerText = currentPage.textBelowButton
 pageIndex = (pageIndex + 1)
 }
   
+//---
 goReset.addEventListener("click", changePage);
 next.addEventListener("click", changePage);
 
-
+//---
 function reset() {
 if (goReset.textContent === "Reset") {
    
