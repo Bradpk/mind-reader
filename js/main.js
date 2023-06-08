@@ -36,7 +36,7 @@ let currentPage = pageArray[pageIndex]
 h1.innerText = currentPage.topText
 next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
-goReset.innerText = currentPage.goButton
+goReset.innerText = currentPage.goButton // ?
 pageIndex = (pageIndex + 1)
 }
 
@@ -46,11 +46,13 @@ currentPage is set to equal a different array number in pageArray
 the objects based upon which array number it is currently at. 
 pageIndex will equal revert back to 0
 */
+
 function changePageReset() {
     let currentPage = pageArray[pageIndex]
     h1.innerText = currentPage.topText
     next.innerText = currentPage.nextButton
     p1.innerText = currentPage.textBelowButton
+    goReset.innerText = currentPage.goButton // ?
     pageIndex = (pageIndex = 0)
 }
   
@@ -72,7 +74,7 @@ let buttonCount = 0
 
 function clickCount(){
     buttonCount = buttonCount + 1
-    if (buttonCount <= 1) {
+    if (buttonCount === 2) {
         return changePage()
     } else {
         return changePageReset()
