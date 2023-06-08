@@ -20,7 +20,7 @@ const pageArray = [
 
     { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 \nclick to proceed", goButton: "↻"},//page 4
 
-    { topText: "symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻"},//page 5
+    { topText: "Symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻"},//page 5
 
     { topText: "&", nextButton: "", textBelowButton: "Your symbol is: \n&", goButton: "↻"}//page 6
   ];

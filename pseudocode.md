@@ -9,7 +9,6 @@ You need to be able to scroll through the numbers to find your symbol (page 5 on
 VARIABLES 
 
 -BEGIN
--RENDER
 -INIT
 
 The h1 display (contains the text that provides instructions)
@@ -33,15 +32,29 @@ INIT The object array (an array of objects that corrispond to each page with the
 
 FUNCTIONS
 
-- Event handlers. (Registers when the buttons have been clicked and what to do once they are clicked)
+- Change Page. 
+    Create a variable to set the current page equal the first page from the object array. 
+    Set the properties in the html to the properties for the given object array
+    Make the page increment by 1 upon clicking. 
 
-- A reset button. (Will revert the display back to the the first array object)
+- Reset Page. 
+    Create a variable to set the current page equal the first page from the object array. 
+    Set the properties in the html to the properties for the given object array
+    Make the page revert back to the first object array upon clicking. 
 
-- Change Page. (Will increment to the next array object)
+- Next Button Event handler.
+    Create an event listener for the next button to initiate the change page function upon click
+
+- A Forward/Back function for the Go/Reset button. 
+    If the text for the button equals "Go" then call the change Function
+    If the text for the button equals "Reset" then call the Reset Page Function.
+
+- Go / Reset Event Handler
+    Create an event listener for the go/reset button that calls the Forward/Back function upon clicking
 
 - Symbol Generator. (Picks a random symbol out of a variable that contains an array of symbols)
 
-- Change Page ()
+
 
 
 
