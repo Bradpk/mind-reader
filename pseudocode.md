@@ -31,7 +31,6 @@ INIT The object array (an array of objects that corrispond to each page with the
 -END
 
 
-
 FUNCTIONS
 
 - Event handlers. (Registers when the buttons have been clicked and what to do once they are clicked)

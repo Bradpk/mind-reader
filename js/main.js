@@ -46,6 +46,20 @@ next.innerText = currentPage.nextButton
 p1.innerText = currentPage.textBelowButton
 pageIndex = (pageIndex + 1)
 }
+
+/*--- This function will reset the object array back to the first page. 
+currentPage is set to equal a different array number in pageArray
+.innerText will change the html content of the chosen variable by setting it to equal one of the properties in one of 
+the objects based upon which array number it is currently at. 
+pageIndex will equal revert back to 0
+*/
+function changePageReset() {
+    let currentPage = pageArray[pageIndex]
+    h1.innerText = currentPage.topText
+    next.innerText = currentPage.nextButton
+    p1.innerText = currentPage.textBelowButton
+    pageIndex = (pageIndex = 0)
+}
   
 /*--- Inserting the changePage function into the "goReset" button event listener will change the page upon clicking by displaying 
 the html element in the second object array.
@@ -55,7 +69,7 @@ goReset.addEventListener("click", changePage);
 /*--- Inserting the changePage function into the "next" button event listener will change the page upon clicking by displaying 
 the html element in the second object array.
 */
-next.addEventListener("click", changePage);
+next.addEventListener("click", changePageBack);
 
 //--- Figuring out how to revert back to page one upon clicking the go reset button the second time
 function reset() {
