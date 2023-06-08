@@ -4,6 +4,9 @@ const next = document.getElementById('next')
 const p1 = document.getElementById('p1')
 const p2 = document.getElementById('p2')
 const goReset = document.getElementById('goReset')
+let pageIndex = 0
+
+
 
 
 //--- Changes the text inside the goReset button to "Reset once clicked"
@@ -35,7 +38,6 @@ currentPage is set to equal a different array number in pageArray
 the objects based upon which array number it is currently at. 
 pageIndex will increase the pageIndex of itself by one which will change the html display to the properties in the next array. 
 */
-let pageIndex = 0
   
 function changePage() {
 let currentPage = pageArray[pageIndex]
@@ -61,5 +63,3 @@ if (goReset.textContent === "Reset") {
    
 }
 }
-
-let sym

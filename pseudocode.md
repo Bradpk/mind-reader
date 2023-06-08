@@ -11,7 +11,6 @@ VARIABLES
 -BEGIN
 -RENDER
 -INIT
-A variable to keep track of the current page.
 
 The h1 display (contains the text that provides instructions)
 
@@ -24,8 +23,10 @@ The second "p" content (contains the text telling the user to proceed)
 The Go / Reset Button (clickable button that renders the next page and then resets to the first page on the subsequent clicks)
 
 The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
-    
-The object array (an array of objects that corrispond to each page with their own uniques properties)
+
+READ A variable to keep track of the current page.
+
+INIT The object array (an array of objects that corrispond to each page with their own uniques properties)
 
 -END
 
@@ -40,6 +41,8 @@ FUNCTIONS
 - A next button. (Will increment to the next array object)
 
 - Symbol Generator. (Picks a random symbol out of a variable that contains an array of symbols)
+
+- Change Page ()
 
 
 
