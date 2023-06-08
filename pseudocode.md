@@ -33,9 +33,13 @@ Procedural
 
 Functional
 
+- Event handlers. (Registers when the buttons have been clicked and what to do once they are clicked)
+
 - A reset button. (Will revert the display back to the the first array object)
 
 - A next button. (Will increment to the next array object)
+
+- Symbol Generator. (Picks a random symbol out of a variable that contains an array of symbols)
 
 Object Oriented
 
