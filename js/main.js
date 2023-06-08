@@ -42,7 +42,8 @@ next.addEventListener("click", changePage)
 
 
 function reset() {
-if (pageIndex === 0) {
+if (pageIndex >= 1) {
 return pageArray[0]
 }
 }
+
