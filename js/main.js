@@ -6,6 +6,7 @@ let h1 = document.getElementById("h1")
 let next = document.getElementById('next')
 let p1 = document.getElementById('p1')
 let goReset = document.getElementById('goReset')
+let symbols = ""
 
 // This contains an array of objects with unique properties that corrispond to the different display elements for each page. 
 // Also included is the pageIndex which keeps track of what page it is currently on. 
