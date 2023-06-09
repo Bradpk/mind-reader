@@ -13,17 +13,17 @@ let symbols = ""
 let state = {
     pageIndex: 0,
     pageArray: [
-        { h1: "I can read your mind", next: "NEXT", p1: "", goReset: "GO", nextHidden: true,},
+        { h1: "I can read your mind", next: "NEXT", p1: "", goReset: "GO", nextHidden: true, },
 
-        { h1: "Pick a number from <br>01 - 99", next: "NEXT", p1: "When you have your number click next",  goReset: "↻", nextHidden: false,},
+        { h1: "Pick a number from <br>01 - 99", next: "NEXT", p1: "When you have your number click next", goReset: "↻", nextHidden: false, },
 
-        { h1: "Add both digits together to get a new number", next: "NEXT", p1: "Ex: 14 is 1 + 4 = 5 <br>click next to proceed", goReset: "↻", nextHidden: false,},
+        { h1: "Add both digits together to get a new number", next: "NEXT", p1: "Ex: 14 is 1 + 4 = 5 <br>click next to proceed", goReset: "↻", nextHidden: false, },
 
-        { h1: "Subtract your new number from the original number", next: "NEXT", p1: `Ex: 14 - 5 = 9 <br>click next to proceed`, goReset: "↻", nextHidden: false,},
+        { h1: "Subtract your new number from the original number", next: "NEXT", p1: `Ex: 14 - 5 = 9 <br>click next to proceed`, goReset: "↻", nextHidden: false, },
 
-        { h1: "0 - &<br>1 - @<br> 2 - $<br> 3 - B", next: "REVEAL", p1: "Find your new number. <br>Note the symbol beside the number", goReset: "↻", nextHidden: false,},
+        { h1: "0 - &<br>1 - @<br> 2 - $<br> 3 - B", next: "REVEAL", p1: "Find your new number. <br>Note the symbol beside the number", goReset: "↻", nextHidden: false, },
 
-        { h1: "&", next: "REVEAL", p1: "Your symbol is: <br> &", goReset: "↻", nextHidden: true,}
+        { h1: "&", next: "REVEAL", p1: "Your symbol is: <br> &", goReset: "↻", nextHidden: true, }
     ],
 };
 
@@ -37,7 +37,7 @@ function init() {
 }
 
 //This function sets up how the page will look and increments the pageIndex by 1. 
-function changePage () {
+function changePage() {
     state.pageIndex = state.pageIndex + 1;
     h1.innerHTML = state.pageArray[state.pageIndex].h1;
     next.hidden = state.pageArray[state.pageIndex].nextHidden;
@@ -48,8 +48,8 @@ function changePage () {
 
 //This function reverts the pageIndex back to 0 and reintilizes the original page display
 function changePageReset() {
-state.pageIndex = 0;
-init()
+    state.pageIndex = 0;
+    init()
 }
 
 //This function calls "changePage" if the pageIndex is 0 and reverts back to pageIndex 0 if it isn't. 
@@ -86,8 +86,8 @@ const goReset = document.getElementById('goReset')
 let pageIndex = 0
 */
 
-/*--- Contains an array of objects that corrispond to different pages. Each page contains its own properties which will display 
-different html element when cycled through. 
+/*--- Contains an array of objects that corrispond to different pages. Each page contains its own properties which will display
+different html element when cycled through.
 */
 /*const pageArray = [
     { topText: "I can read your mind", nextButton: "", textBelowButton: "", goButton: "Go" },//page 1
@@ -104,11 +104,11 @@ different html element when cycled through.
 ];
 */
 
-/*--- This function will cycle through the different object arrays (pages). 
+/*--- This function will cycle through the different object arrays (pages).
 currentPage is set to equal a different array number in pageArray
-.innerText will change the html content of the chosen variable by setting it to equal one of the properties in one of 
-the objects based upon which array number it is currently at. 
-pageIndex will increase the pageIndex of itself by one which will change the html display to the properties in the next array. 
+.innerText will change the html content of the chosen variable by setting it to equal one of the properties in one of
+the objects based upon which array number it is currently at.
+pageIndex will increase the pageIndex of itself by one which will change the html display to the properties in the next array.
 */
 
 /*function changePage() {
@@ -127,10 +127,10 @@ pageIndex will increase the pageIndex of itself by one which will change the htm
 }
 */
 
-/*--- This function will reset the object array back to the first page. 
+/*--- This function will reset the object array back to the first page.
 currentPage is set to equal a different array number in pageArray
-.innerText will change the html content of the chosen variable by setting it to equal one of the properties in one of 
-the objects based upon which array number it is currently at. 
+.innerText will change the html content of the chosen variable by setting it to equal one of the properties in one of
+the objects based upon which array number it is currently at.
 pageIndex will equal revert back to 0
 */
 
