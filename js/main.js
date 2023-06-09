@@ -1,12 +1,10 @@
-//--- Creates the variables that are lniked with their html elements 
+//--- Creates the variables that are linked to html elements 
 const h1 = document.getElementById("h1")
 const next = document.getElementById('next')
 const p1 = document.getElementById('p1')
+const p2 = document.getElementById('p2')
 const goReset = document.getElementById('goReset')
 let pageIndex = 0
-
-  
-  
 
 
 
@@ -18,14 +16,14 @@ const pageArray = [
 
     { topText: "Pick a number from \n01 - 99", nextButton: "NEXT", textBelowButton: "when you have your number click next", goButton: "↻" },//page 2
 
-    { topText: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5 \nclick to proceed", goButton: "↻"},//page 3
+    { topText: "Add both digits together to get a new number", nextButton: "NEXT", textBelowButton: "Ex: 14 is 1 + 4 = 5 \nclick to proceed", goButton: "↻" },//page 3
 
-    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 \nclick to proceed", goButton: "↻"},//page 4
+    { topText: "Subtract your new number from the original number", nextButton: "NEXT", textBelowButton: "Ex: 14 - 5 = 9 \nclick to proceed", goButton: "↻" },//page 4
 
-    { topText: "Symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻"},//page 5
+    { topText: "Symbols", nextButton: "REVEAL", textBelowButton: "Find your new number. Note the symbol beside the number", goButton: "↻" },//page 5
 
-    { topText: "&", nextButton: "", textBelowButton: "Your symbol is: \n&", goButton: "↻"}//page 6
-  ];
+    { topText: "&", nextButton: "", textBelowButton: "Your symbol is: \n&", goButton: "↻" }//page 6
+];
 
 /*--- This function will cycle through the different object arrays (pages). 
 currentPage is set to equal a different array number in pageArray
@@ -33,20 +31,20 @@ currentPage is set to equal a different array number in pageArray
 the objects based upon which array number it is currently at. 
 pageIndex will increase the pageIndex of itself by one which will change the html display to the properties in the next array. 
 */
-  
+
 function changePage() {
-let currentPage = pageArray[pageIndex]
-h1.innerText = currentPage.topText
-next.innerText = currentPage.nextButton
-p1.innerText = currentPage.textBelowButton
-goReset.innerText = currentPage.goButton 
-if (pageIndex === 0 || pageIndex === 5) {
-    next.style.visibility = "hidden";
-  } else {
-    next.style.visibility = "visible";
-    next.innerText = currentPage.nextButton;
-  }
-pageIndex = (pageIndex + 1)
+    let currentPage = pageArray[pageIndex]
+    h1.innerText = currentPage.topText
+    next.innerText = currentPage.nextButton
+    p1.innerText = currentPage.textBelowButton
+    goReset.innerText = currentPage.goButton
+    if (pageIndex === 0 || pageIndex === 5) {
+        next.style.visibility = "hidden";
+    } else {
+        next.style.visibility = "visible";
+        next.innerText = currentPage.nextButton;
+    }
+    pageIndex = (pageIndex + 1)
 }
 
 /*--- This function will reset the object array back to the first page. 
@@ -61,50 +59,29 @@ function changePageReset() {
     h1.innerText = currentPage.topText
     next.innerText = currentPage.nextButton
     p1.innerText = currentPage.textBelowButton
-    goReset.innerText = currentPage.goButton 
-    pageIndex = (pageIndex = 0)
+    goReset.innerText = currentPage.goButton
+    pageIndex = 0
 }
 
-
-  
-/*--- Inserting the changePage function into the "goReset" button event listener will change the page upon clicking by displaying 
-the html element in the second object array.
-*/
-
-//goReset.addEventListener("click", changePageReset);
-
-/*--- Inserting the changePage function into the "next" button event listener will change the page upon clicking by displaying 
-the html element in the second object array.
-*/
-
+// the button will call the changePage function upon click
 next.addEventListener("click", changePage);
 
-//--- Figuring out how to revert back to page one upon clicking the go reset button the second time
-
-//let buttonCount = 0
-
-/*function clickCount(){
-    buttonCount = buttonCount + 1
-    if (buttonCount === 2) {
-        return changePage()
-    } else {
-        return changePageReset()
-        buttonCount = 0
-        pageIndex = 0
-    }
-}
-*/
 
 
-//goReset.addEventListener("click", clickCount)
-
-
+// This will call the changePage function if the goReset button says "Go" otherwise it will call the changePageReset function
 function forwardBack() {
-if (goReset.innerText === "Go"){
-    changePage()
-} else {
-    changePageReset()
-}
+    if (goReset.innerText === "Go") {
+        changePage()
+    } else {
+        changePageReset()
+    }
 }
 
 goReset.addEventListener("click", forwardBack);
+
+
+
+
+
+
+
