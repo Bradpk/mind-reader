@@ -1,3 +1,18 @@
+/*
+window.onload = function () {
+const h1 = document.getElementById("h1")
+const next = document.getElementById('next')
+const p1 = document.getElementById('p1')
+const p2 = document.getElementById('p2')
+const goReset = document.getElementById('goReset')
+
+h1.innerText = 
+next.innerText = 
+p1.innerText = 
+goReset.innerText = 
+}
+*/
+
 //--- Creates the variables that are linked to html elements 
 const h1 = document.getElementById("h1")
 const next = document.getElementById('next')
@@ -5,8 +20,6 @@ const p1 = document.getElementById('p1')
 const p2 = document.getElementById('p2')
 const goReset = document.getElementById('goReset')
 let pageIndex = 0
-
-
 
 /*--- Contains an array of objects that corrispond to different pages. Each page contains its own properties which will display 
 different html element when cycled through. 
@@ -63,11 +76,6 @@ function changePageReset() {
     pageIndex = 0
 }
 
-// the button will call the changePage function upon click
-next.addEventListener("click", changePage);
-
-
-
 // This will call the changePage function if the goReset button says "Go" otherwise it will call the changePageReset function
 function forwardBack() {
     if (goReset.innerText === "Go") {
@@ -77,7 +85,11 @@ function forwardBack() {
     }
 }
 
+// This will call the forwardBack function upon click
 goReset.addEventListener("click", forwardBack);
+
+// This will call the changePage function upon click
+next.addEventListener("click", changePage);
 
 
 
