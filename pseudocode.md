@@ -30,7 +30,6 @@ FUNCTIONS
     An array of objects that corrispond to each page with their own uniques properties
     SHould also include a pageIndex
 
-
 - Init 
     Take the variables that are declared at the top and set their inner.html to equal the relavant property that is inside 
     one of the objects in the object array. 
