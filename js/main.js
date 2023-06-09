@@ -75,7 +75,7 @@ addEventListener('load', init);
 
 
 
-//THIS CODE SUCKS ASS MY DUDE
+//THIS CODE SUCKS MY DUDE
 
 //--- Creates the variables that are linked to html elements 
 /*const h1 = document.getElementById("h1")
