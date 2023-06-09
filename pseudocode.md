@@ -9,7 +9,6 @@ You need to be able to scroll through the numbers to find your symbol (page 5 on
 VARIABLES 
 
 -BEGIN
--INIT
 
 The h1 display (contains the text that provides instructions)
 
@@ -17,20 +16,24 @@ The next button (clickable button thats renders the next page)
 
 The first "p" content (contains the text that provides the examples)
 
-The second "p" content (contains the text telling the user to proceed)
-
 The Go / Reset Button (clickable button that renders the next page and then resets to the first page on the subsequent clicks)
 
 The number / symbol array (contains the number 0 - 99 with corrisponding symbols on page 5)
 
-READ A variable to keep track of the current page.
-
-INIT The object array (an array of objects that corrispond to each page with their own uniques properties)
-
 -END
 
 
+
 FUNCTIONS
+
+- The Object Array 
+    An array of objects that corrispond to each page with their own uniques properties
+    SHould also include a pageIndex
+
+
+- Init 
+    Take the variables that are declared at the top and set their inner.html to equal the relavant property that is inside 
+    one of the objects in the object array. 
 
 - Change Page. 
     Create a variable to set the current page equal the first page from the object array. 
@@ -42,26 +45,21 @@ FUNCTIONS
     Set the properties in the html to the properties for the given object array
     Make the page revert back to the first object array upon clicking. 
 
-- Next Button Event handler.
-    Create an event listener for the next button to initiate the change page function upon click
-
-- A Forward/Back function for the Go/Reset button. 
+ - A Forward/Back function for the Go/Reset button. 
     If the text for the button equals "Go" then call the change Function
     If the text for the button equals "Reset" then call the Reset Page Function.
+
+- Next Button Event handler.
+    Create an event listener for the next button to initiate the change page function upon click
 
 - Go / Reset Event Handler
     Create an event listener for the go/reset button that calls the Forward/Back function upon clicking
 
+- Event Handler to load the init function
+    Create an event listener with "load" set to the init function
+
 - Symbol Generator. 
     Picks a random symbol out of a variable that contains an array of symbols using math.random? 
-
-
-
-
-
-OBJECT ORIENTED
-
-- An object that contains an array of objects. Each of the objects in the array will corrispond to a different page display with it's own unique set of properties. h1, nextbutton, p, resetbutton etc
 
 
 
