@@ -73,20 +73,18 @@ addEventListener('load', init);
 let chosenSymbol = () => {
 let numbers = ''
 let magicSymbol = ''
+
 for(let i = 0; i < 100; i++){
-    numbers += i + '<br>';
-}
-state.pageArray[4].h1 = numbers
 if (i % 9 === 0){
-    magicSymbol = "&"
+magicSymbol = "&"
 } else {
     let random = Math.floor(Math.random() * symbols.length)
-    magicSymbol = symbol[random]
+    magicSymbol = symbols[random]
 }
-
+numbers += i + ' = ' + magicSymbol + '<br>';
 } 
-
-
+state.pageArray[4].h1 = numbers
+}
 
 
 
