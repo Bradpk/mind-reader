@@ -6,9 +6,9 @@ let h1 = document.getElementById("h1")
 let next = document.getElementById('next')
 let p1 = document.getElementById('p1')
 let goReset = document.getElementById('goReset')
-let symbols = ""
+let symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '_']
 
-// This contains an array of objects with unique properties that corrispond to the different display elements for each page. 
+// This contains an array of objects with unique key value properties that corrispond to the different display elements for each page. 
 // Also included is the pageIndex which keeps track of what page it is currently on. 
 let state = {
     pageIndex: 0,
@@ -34,6 +34,7 @@ function init() {
     next.hidden = state.pageArray[state.pageIndex].nextHidden;
     p1.innerHTML = state.pageArray[state.pageIndex].p1;
     goReset.innerHTML = state.pageArray[state.pageIndex].goReset;
+    chosenSymbol()
 }
 
 //This function sets up how the page will look and increments the pageIndex by 1. 
@@ -67,6 +68,23 @@ function forwardBack() {
 next.addEventListener("click", changePage);
 goReset.addEventListener("click", forwardBack);
 addEventListener('load', init);
+
+//Lets figure out this symbol business
+let chosenSymbol = () => {
+let numbers = ''
+let magicSymbol = ''
+for(let i = 0; i < 100; i++){
+    numbers += i + '<br>';
+}
+state.pageArray[4].h1 = numbers
+if (i % 9 === 0){
+    magicSymbol = "&"
+} else {
+    let random = Math.floor(Math.random() * symbols.length)
+    magicSymbol = symbol[random]
+}
+
+} 
 
 
 
@@ -177,7 +195,6 @@ p1.innerText =
 goReset.innerText = 
 }
 */
-
 
 
 
