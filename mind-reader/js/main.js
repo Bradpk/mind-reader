@@ -193,6 +193,3 @@ p1.innerText =
 goReset.innerText = 
 }
 */
-
-
-
