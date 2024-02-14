@@ -1,5 +1,5 @@
 body{
-background-color: rgb(255, 254, 239);
+background-color: rgb(250, 255, 239);
 }
 
 .card {
@@ -16,7 +16,7 @@ div {
     margin-top: 10px;
     color: white;
     height: 60px;
-    background-color: rgb(66, 171, 251);
+    background-color: rgb(47, 151, 230);
 }
 
 #goReset {
@@ -42,6 +42,6 @@ h1 {
 
 p {
     margin-top: 20px;
-    color: rgb(66, 171, 251);
+    color: rgb(47, 151, 230);
     font-size: 28px;
 }
