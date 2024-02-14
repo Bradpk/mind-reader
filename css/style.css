@@ -3,6 +3,7 @@ background-color: rgb(250, 255, 239);
 }
 
 .card {
+    border: 1px solid black;
     margin-top: 40px;
     height: 650px;
     width: 300px;
@@ -13,6 +14,7 @@ div {
 }
 
 #next {
+    border: 1px solid black;
     margin-top: 10px;
     color: white;
     height: 60px;
@@ -20,24 +22,32 @@ div {
 }
 
 #goReset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 5px;
     width: 80px;
     height: 80px;
     border-radius: 60%;
-    border: 0.1 solid black;
+    border: 1px solid black;
     font-size: 20px;
     padding: 30px;
-    /* position: absolute; */
+    position: absolute;
     right: 0;
     bottom: 0;
     color: rgb(66, 171, 251);
     background-color: white;
 }
 
+#goReset:hover {
+    background-color: rgb(0, 255, 0);
+}
+
 h1 {
     margin-top: 40px;
     color: rgba(0, 0, 0, 0.629);
-    font-size: 40px;
+    font-size: 35px;
     overflow: scroll;
     height: 200px;
 }

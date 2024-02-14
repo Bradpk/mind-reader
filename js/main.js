@@ -15,15 +15,15 @@ let state = {
     pageArray: [
         { h1: "I can read your mind", next: "NEXT", p1: "", goReset: "GO", nextHidden: true, },
 
-        { h1: "Pick a number from <br>01 - 99", next: "NEXT", p1: "When you have your number click next", goReset: "↻", nextHidden: false, },
+        { h1: "Pick a number between <br> 0 and 99", next: "NEXT", p1: "When you have your number click next", goReset: "↻", nextHidden: false, },
 
-        { h1: "Add both digits together to get a new number", next: "NEXT", p1: "Ex: 14 is 1 + 4 = 5 <br>click next to proceed", goReset: "↻", nextHidden: false, },
+        { h1: "Add both digits together to get a new number", next: "NEXT", p1: "Example: <br> 14 is 1 + 4 = 5 <br>click next to proceed", goReset: "↻", nextHidden: false, },
 
-        { h1: "Subtract your new number from the original number", next: "NEXT", p1: `Ex: 14 - 5 = 9 <br>click next to proceed`, goReset: "↻", nextHidden: false, },
+        { h1: "Subtract your new number from the original number", next: "NEXT", p1: `Example: <br> 14 - 5 = 9 <br>click next to proceed`, goReset: "↻", nextHidden: false, },
 
-        { h1: "0 - &<br>1 - @<br> 2 - $<br> 3 - B", next: "REVEAL", p1: "Find your new number. <br>Note the symbol beside the number", goReset: "↻", nextHidden: false, },
+        { h1: "0 - &<br>1 - @<br> 2 - $<br> 3 - B", next: "REVEAL", p1: "Find your new number <br>Note the symbol beside the number", goReset: "↻", nextHidden: false, },
 
-        { h1: "&", next: "REVEAL", p1: "Your symbol is: <br> &", goReset: "↻", nextHidden: true, }
+        { h1: "Whoa!", next: "REVEAL", p1: "Your symbol is: <br> &", goReset: "↻", nextHidden: true, }
     ],
 };
 
