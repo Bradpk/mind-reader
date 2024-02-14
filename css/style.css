@@ -27,7 +27,7 @@ div {
     border: 0.1 solid black;
     font-size: 25px;
     padding: 30px;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     bottom: 0;
     color: rgb(66, 171, 251);
