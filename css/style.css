@@ -2,11 +2,34 @@ body{
 background-color: rgb(250, 255, 239);
 }
 
+.video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+    display: block;
+  }
+
 .card {
-    border: 1px solid black;
-    margin-top: 40px;
-    height: 650px;
-    width: 300px;
+    border: 2px solid black;
+    margin-top: 75px;
+    height: 675px;
+    width: 325px;
+    background-color: rgb(250, 255, 239);
+    font-family: fantasy;
+    color: black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: -1;
 }
 
 div {
