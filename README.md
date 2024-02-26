@@ -6,4 +6,5 @@ This is another early project that uses a simple mathematics trick to "predict" 
 
 JavaScript, 
 HTML, 
-CSS
+CSS,
+Bootstrap
